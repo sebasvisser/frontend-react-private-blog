@@ -1,10 +1,10 @@
+import React from 'react';
 
-import posts from './data/posts.json';
-
-function App() {
-    console.log(posts);
+export default function Blogposts() {
 
     return (
-        <></>
+        <>
+            hier komt de lijst met posts
+        </>
     );
 }

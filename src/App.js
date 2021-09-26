@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
+import Home
+    from "./components/Home";
+import Login
+    from "./components/Login";
+import Navbar
+    from "./components/Navbar";
+import Blogposts
+    from "./components/Blogposts";
+import Blog
+    from "./components/Blog";
+
 
 function App() {
-  // We houden in de state bij of iemand is "ingelogd" (simpele versie)
-  const [isAuthenticated, toggleIsAuthenticated ] = useState(false);
+
 
   return (
-    <div>
-      Maak hier jouw prachtige blog-applicatie!
-    </div>
+      <>
+          <nav>
+              <Navbar />
+          </nav>
+            <section>
+                <Home />
+                <Blogposts />
+                <Login />
+              Maak hier jouw prachtige blog-applicatie!
+            </section>
+      </>
   );
 }
 
