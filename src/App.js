@@ -3,7 +3,6 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    BrowserRouter,
 } from 'react-router-dom';
 import './App.css';
 import Home
@@ -26,7 +25,7 @@ function App() {
           <nav>
               <Navbar />
           </nav>
-            <switch>
+            <Switch>
                 <Route path="/">
                     <Home />
                 </Route>
@@ -36,7 +35,7 @@ function App() {
                 <Route path="/login">
                     <Login />
                 </Route>
-            </switch>
+            </Switch>
               Maak hier jouw prachtige blog-applicatie!
       </Router>
   );

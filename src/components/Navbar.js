@@ -15,7 +15,7 @@ export default function Navbar(){
                 }
                 {isAuthenticated
                     ? <button onClick={() => toggleIsAuthenticated(false)}>Uitloggen</button>
-                    : <button onClick={() => toggleIsAuthenticated(true)}>Inloggen</button>
+                    :                 <li>Login</li>
                 }
             </ul>
         </nav>
