@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import '../App.css';
+import { Link } from 'react-router-dom';
 
 export default function Navbar(){
     // We houden in de state bij of iemand is "ingelogd" (simpele versie)
@@ -9,13 +10,13 @@ export default function Navbar(){
       <>
         <nav className="nav-bar">
             <ul>
-                <li>Home</li>
+                <Link to="/">Home</Link>
                 {isAuthenticated &&
-                    <li>Blogposts</li>
+                    <Link to="/blogposts">Blogposts</Link>
                 }
                 {isAuthenticated
                     ? <button onClick={() => toggleIsAuthenticated(false)}>Uitloggen</button>
-                    :                 <li>Login</li>
+                    :                 <Link to="/login">Login</Link>
                 }
             </ul>
         </nav>
