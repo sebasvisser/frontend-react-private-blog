@@ -1,4 +1,10 @@
 import React from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    BrowserRouter,
+} from 'react-router-dom';
 import './App.css';
 import Home
     from "./components/Home";
@@ -16,17 +22,23 @@ function App() {
 
 
   return (
-      <>
+      <Router>
           <nav>
               <Navbar />
           </nav>
-            <section>
-                <Home />
-                <Blogposts />
-                <Login />
+            <switch>
+                <Route path="/">
+                    <Home />
+                </Route>
+                <Route path="/blogposts">
+                    <Blogposts />
+                </Route>
+                <Route path="/login">
+                    <Login />
+                </Route>
+            </switch>
               Maak hier jouw prachtige blog-applicatie!
-            </section>
-      </>
+      </Router>
   );
 }
 

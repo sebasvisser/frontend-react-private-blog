@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
+import {isAuthenticated, toggleIsAuthenticated} from './Navbar';
 
 export default function Login() {
-    const [isLoggedIn, toggleIsLoggedIn ] = useState(true);
+    // const [isLoggedIn, toggleIsLoggedIn ] = useState(true);
 
     return (
         <>
@@ -9,9 +10,9 @@ export default function Login() {
             <p>
                 Button werkt nog niet goed.. is ook anders dan de navbar..
             </p>
-            {isLoggedIn
-                ? <button onClick={() => toggleIsLoggedIn(true)}>Inloggen</button>
-                : <button onClick={() => toggleIsLoggedIn(false)}>Uitloggen</button>
+            {isAuthenticated
+                ? <button onClick={() => toggleIsAuthenticated(true)}>Inloggen</button>
+                : <button onClick={() => toggleIsAuthenticated(false)}>Uitloggen</button>
             }
         </>
     );
