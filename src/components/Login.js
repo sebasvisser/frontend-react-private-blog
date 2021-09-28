@@ -7,7 +7,7 @@ export default function Login() {
         <>
             <h1>Login Pagina</h1>
             <p>
-                Button werkt nog niet goed.. is ook anders dan de navbar..Daarom comments zodat de rest wel compiled
+                Druk op de knop om in te loggen!
             </p>
             {isAuthenticated
                 ? <button onClick={() => toggleIsAuthenticated(true)}>Uitloggen</button>
