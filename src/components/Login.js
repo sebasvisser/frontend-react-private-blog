@@ -10,8 +10,8 @@ export default function Login() {
                 Button werkt nog niet goed.. is ook anders dan de navbar..Daarom comments zodat de rest wel compiled
             </p>
             {isAuthenticated
-                ? <button onClick={() => toggleIsAuthenticated(true)}>Inloggen</button>
-                : <button onClick={() => toggleIsAuthenticated(false)}>Uitloggen</button>
+                ? <button onClick={() => toggleIsAuthenticated(true)}>Uitloggen</button>
+                : <button onClick={() => toggleIsAuthenticated(false)}>Inloggen</button>
             }
         </>
     );

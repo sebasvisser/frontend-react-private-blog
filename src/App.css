@@ -52,3 +52,7 @@ ul > li, button {
 .nav-bar {
   background-color: red;
 }
+
+.active-link {
+  border-bottom: 2px solid white;
+}

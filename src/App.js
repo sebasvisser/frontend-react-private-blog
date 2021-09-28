@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
+    Link,
 } from 'react-router-dom';
 import './App.css';
 import Home
@@ -13,31 +13,30 @@ import Navbar
     from "./components/Navbar";
 import Blogposts
     from "./components/Blogposts";
-import Blog
-    from "./components/Blog";
+
 
 
 function App() {
+    const [isAuthenticated, toggleIsAuthenticated ] = useState(true);
 
 
   return (
-      <Router>
+      <>
           <nav>
-              <Navbar />
+            <Navbar />
           </nav>
-            <Switch>
-                <Route path="/">
+          <Switch>
+                <Route exact path="/">
                     <Home />
                 </Route>
-                <Route path="/blogposts">
+                <Route exact path="/blogposts">
                     <Blogposts />
                 </Route>
-                <Route path="/login">
+                <Route exact path="/login">
                     <Login />
                 </Route>
             </Switch>
-              Maak hier jouw prachtige blog-applicatie!
-      </Router>
+          </>
   );
 }
 
