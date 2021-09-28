@@ -38,7 +38,7 @@ function App() {
                     <Blogposts />
                 </Route>
                 <Route exact path="/login">
-                    <Login />
+                    <Login toggleIsAuthenticated={toggleIsAuthenticated} isAuthenticated={isAuthenticated}/>
                 </Route>
             </Switch>
           </>
