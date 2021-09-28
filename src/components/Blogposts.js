@@ -12,7 +12,8 @@ export default function Blogposts({isAuthenticated}) {
 
     let listBlogposts = []
     for (let i = 0; i < numberOfPosts; i++) {
-        listBlogposts.push(<li><Link to={posts[i].id} activeClassName="active-link">{posts[i].title}</Link></li>);
+        let blogLink = "/blog/" + posts[i].id;
+        listBlogposts.push(<li><Link to={blogLink} activeClassName="active-link">{posts[i].title}</Link></li>);
     }
 
     console.log(posts);
