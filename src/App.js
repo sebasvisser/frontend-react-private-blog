@@ -35,7 +35,7 @@ function App() {
                     <Home />
                 </Route>
                 <Route exact path="/blogposts">
-                    <Blogposts />
+                    <Blogposts isAuthenticated={isAuthenticated} />
                 </Route>
                 <Route exact path="/login">
                     <Login toggleIsAuthenticated={toggleIsAuthenticated} isAuthenticated={isAuthenticated}/>
