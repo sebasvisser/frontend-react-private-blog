@@ -20,13 +20,13 @@ function App() {
       <>
           <nav className="nav-bar">
               <ul>
-                  <Link to="/" activeClassName="active-link">Home</Link>
+                  <Link to="/">Home</Link>
                   {isAuthenticated &&
-                  <Link to="/blogposts" activeClassName="active-link">Blogposts</Link>
+                  <Link to="/blogposts">Blogposts</Link>
                   }
                   {isAuthenticated
                       ? <button onClick={() => toggleIsAuthenticated(false)}>Uitloggen</button>
-                      : <Link to="/login" activeClassName="active-link">Login</Link>
+                      : <Link to="/login">Login</Link>
                   }
               </ul>
           </nav>

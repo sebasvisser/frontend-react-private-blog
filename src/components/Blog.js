@@ -1,19 +1,15 @@
 import React from 'react';
-import {useHistory, useParams}
+import {useParams}
     from "react-router-dom";
 import posts from '../data/posts.json';
 
 
-export default function Blog(props) {
-    console.log("hallo ik ben de blogpagina")
-    console.log(posts);
-    const { id } = props.match.params;
-    const postTitle = posts[id].title;
-    const postsBody = posts[id].content;
+export default function Blog() {
+    const { id } = useParams();
     return (
         <>
-            <h1>{postTitle}</h1>
-            <p>{postsBody}</p>
+            <h1>{posts[id].title}</h1>
+            <p>{posts[id].content}</p>
         </>
     );
 }

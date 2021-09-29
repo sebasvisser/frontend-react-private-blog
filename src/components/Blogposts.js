@@ -15,7 +15,7 @@ export default function Blogposts({isAuthenticated}) {
     let listBlogposts = []
     for (let i = 0; i < numberOfPosts; i++) {
         let blogLink = "/blog/" + posts[i].id;
-        listBlogposts.push(<li><Link to={blogLink} activeClassName="active-link">{posts[i].title}</Link></li>);
+        listBlogposts.push(<li><Link to={blogLink}>{posts[i].title}</Link></li>);
     }
 
     // console.log(posts);
@@ -28,10 +28,11 @@ export default function Blogposts({isAuthenticated}) {
                 <h2>Aantal
                     blogposts: {numberOfPosts}</h2>
                 <ul>{listBlogposts}</ul>
+                <h1>{posts[4].title}</h1>
             </>
             }
             <Switch>
-                <Route exact path="/blog/:id" render={(props) => <Blog {...props} />} />
+                <Route exact path="/blog/:id" component={Blog} />
             </Switch>
         </>
 
