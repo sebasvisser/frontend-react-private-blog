@@ -5,6 +5,8 @@ import {
     Route,
     Link
 } from 'react-router-dom';
+import Blog
+    from "./Blog";
 
 
 export default function Blogposts({isAuthenticated}) {
@@ -28,6 +30,11 @@ export default function Blogposts({isAuthenticated}) {
                 <ul>{listBlogposts}</ul>
             </>
             }
+            <Switch>
+                <Route path="/blog/:id">
+                    <Blog />
+                </Route>
+            </Switch>
         </>
 
     );
