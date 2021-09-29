@@ -18,7 +18,7 @@ export default function Blogposts({isAuthenticated}) {
         listBlogposts.push(<li><Link to={blogLink} activeClassName="active-link">{posts[i].title}</Link></li>);
     }
 
-    console.log(posts);
+    // console.log(posts);
     return (
         <>
             {isAuthenticated &&
@@ -31,9 +31,7 @@ export default function Blogposts({isAuthenticated}) {
             </>
             }
             <Switch>
-                <Route path="/blog/:id">
-                    <Blog />
-                </Route>
+                <Route exact path="/blog/:id" render={(props) => <Blog {...props} />} />
             </Switch>
         </>
 

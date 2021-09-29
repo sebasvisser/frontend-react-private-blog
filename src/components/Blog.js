@@ -4,8 +4,10 @@ import {useHistory, useParams}
 import posts from '../data/posts.json';
 
 
-export default function Blog() {
-    const { id } = useParams()
+export default function Blog(props) {
+    console.log("hallo ik ben de blogpagina")
+    console.log(posts);
+    const { id } = props.match.params;
     const postTitle = posts[id].title;
     const postsBody = posts[id].content;
     return (
